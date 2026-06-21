@@ -1,9 +1,8 @@
 # Data Cleaning Log — Retail Orders Dataset
-**Analyst:** [Your Name]  
+**Name:** Aditya Yogesh Choudhari , bitsom_ba_2511025  
 **Dataset:** raw_orders.xlsx  
 **Total Raw Records:** 932  
-**Final Clean Records:** 912  
-**Date Processed:** June 2025  
+**Final Clean Records:** 912   
 **Tool Used:** Microsoft Excel (formulas, Find & Replace, Remove Duplicates, PivotTables)
 
 ---
@@ -192,7 +191,7 @@ No other records were permanently removed. All flagged records are retained with
 
 1. **Cannot verify state-to-region mapping** without a reference lookup table — 25 rows left as "Unknown".
 
-2. **Date ambiguity (day-first vs month-first) is the single biggest source of uncertainty in this analysis.** Ambiguous slash-formatted dates were read as day-first (DD/MM/YYYY), which produced 93 "ship before order date" flags — a meaningfully large number. Reading the same ambiguous dates as month-first instead would produce a much smaller flagged set (roughly 22 records based on a cross-check). This is a genuine judgment call, not a confirmed fact, and should be verified against the source system before any of these 93 records are treated as confirmed data errors.
+2. **Date ambiguity (day-first vs month-first) is the single biggest source of uncertainty in this analysis.** Ambiguous slash-formatted dates were read as day-first (DD/MM/YYYY), which produced 93 "ship before order date" flags which is  a meaningfully large number. Reading the same ambiguous dates as month-first instead would produce a much smaller flagged set (roughly 22 records based on a cross-check). This is a genuine judgment call, not a confirmed fact, and should be verified against the source system before any of these 93 records are treated as confirmed data errors.
 
 3. **Sales calculation mismatches** (49 rows) could stem from rounding rules at the source system, partial shipments, or mid-order amendments — root cause cannot be confirmed without source system access.
 
